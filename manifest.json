@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "No YouTube Shorts & Playables",
+  "version": "1.1.0",
+  "description": "Removes YouTube Shorts and Playables from the homepage, search, sidebar, subscriptions and channel pages. Shorts links open in the normal player.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*", "*://m.youtube.com/*"],
+      "css": ["hide-shorts.css"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

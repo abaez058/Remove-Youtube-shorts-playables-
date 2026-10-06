@@ -1,0 +1,46 @@
+/* Sidebar (expanded + collapsed mini sidebar) */
+ytd-guide-entry-renderer:has(a[href^="/shorts"]),
+ytd-mini-guide-entry-renderer:has(a[href^="/shorts"]),
+ytd-mini-guide-entry-renderer[aria-label="Shorts"],
+ytd-guide-entry-renderer:has(a[title="Shorts"]),
+ytd-guide-entry-renderer:has(a[href^="/playables"]),
+ytd-mini-guide-entry-renderer:has(a[href^="/playables"]),
+ytd-mini-guide-entry-renderer[aria-label="Playables"],
+ytd-guide-entry-renderer:has(a[title="Playables"]),
+
+/* Shorts shelves on home / search / subscriptions */
+ytd-reel-shelf-renderer,
+ytd-rich-section-renderer:has(ytd-rich-shelf-renderer[is-shorts]),
+ytd-rich-section-renderer:has(a[href*="/shorts/"]),
+ytd-rich-shelf-renderer:has(a[href*="/shorts/"]),
+grid-shelf-view-model:has(a[href*="/shorts/"]),
+ytm-shorts-lockup-view-model,
+ytm-shorts-lockup-view-model-v2,
+
+/* Playables shelves and items */
+ytd-rich-section-renderer:has(a[href*="/playables"]),
+ytd-rich-shelf-renderer:has(a[href*="/playables"]),
+ytd-shelf-renderer:has(a[href*="/playables"]),
+grid-shelf-view-model:has(a[href*="/playables"]),
+ytd-rich-item-renderer:has(a[href*="/playables"]),
+ytd-video-renderer:has(a[href*="/playables"]),
+yt-lockup-view-model:has(a[href*="/playables"]),
+
+/* Individual Shorts mixed into video lists */
+ytd-video-renderer:has(a[href*="/shorts/"]),
+ytd-grid-video-renderer:has(a[href*="/shorts/"]),
+ytd-rich-item-renderer:has(a[href*="/shorts/"]),
+ytd-compact-video-renderer:has(a[href*="/shorts/"]),
+yt-lockup-view-model:has(a[href*="/shorts/"]),
+
+/* Shorts tab on channel pages + search chips */
+yt-tab-shape[tab-title="Shorts"],
+tp-yt-paper-tab:has(a[href$="/shorts"]),
+yt-chip-cloud-chip-renderer:has(a[href*="/shorts"]),
+yt-chip-cloud-chip-renderer:has(a[href*="/playables"]),
+
+/* Mobile site */
+ytm-reel-shelf-renderer,
+ytm-pivot-bar-item-renderer:has(.pivot-shorts) {
+  display: none !important;
+}
